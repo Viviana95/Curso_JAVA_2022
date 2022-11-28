@@ -58,13 +58,13 @@ public abstract class Figura {
 			Figura fig = (Figura) obj;
 			bln = fig.getNombre() != null && fig.getNombre().equals(nombre);
 		}
-		return super.equals(obj);
+		return bln;
 	}
 
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		StringBuilder sb = new StringBuilder("\nombre=");
+		StringBuilder sb = new StringBuilder("\nnombre= ");
 		sb.append(nombre);
 		return sb.toString();
 	}

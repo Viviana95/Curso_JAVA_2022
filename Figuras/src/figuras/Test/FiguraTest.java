@@ -38,8 +38,7 @@ class FiguraTest {
 		cirVacio = new Circulo();
 		cirLleno = new Circulo("circulo", 10);
 		
-		figuraList = new ArrayList<>();
-		
+		figuraList = new ArrayList<>();		
 		figuraList.add(cuaVacio);
 		figuraList.add(cuaLleno);
 		figuraList.add(cirLleno);
@@ -48,16 +47,14 @@ class FiguraTest {
 		figuraList.add(new Cuadrado("cuadrado 2", 15));
 		figuraList.add(new Circulo("circulo 2", 15));
 		
-		figuraSet = new HashSet<>();
-		
-		figuraSet.add(cirLleno);
+		figuraSet = new HashSet<>();		
 		figuraSet.add(cuaVacio);
 		figuraSet.add(cuaLleno);
-		
+		figuraSet.add(cirLleno);
 		figuraSet.add(cirVacio);
 		
-		figuraList.add(new Cuadrado("cuadrado 2", 15));
-		figuraList.add(new Circulo("circulo 2", 15));
+		figuraSet.add(new Cuadrado("cuadrado 2", 15));
+		figuraSet.add(new Circulo("circulo 2", 15));
 		
 	}
 
@@ -119,9 +116,9 @@ class FiguraTest {
 	}
 	
 	@Test
-	void testCuadradoEqualsSet_Cant() {
-		figuraSet.add(new Cuadrado());
-		assertEquals(6, figuraList.size());
+	void testCuadradoEqualsSet_Cant() throws FiguraException {
+		figuraSet.add(new Cuadrado("cuadrado", 10));		
+		assertEquals(6, figuraSet.size());
 	}
 	
 	@Test

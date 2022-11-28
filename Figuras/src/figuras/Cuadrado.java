@@ -13,7 +13,7 @@ public class Cuadrado extends Figura {
 	 */
 	public Cuadrado(String pNombre, float plado) throws FiguraException{
 		super(pNombre);
-		this.lado = plado;
+		setLado(plado);
 	}
 	
 	public float getLado() {
@@ -39,7 +39,7 @@ public class Cuadrado extends Figura {
 
 	@Override
 	public boolean equals(Object obj) {  //recibe un object
-		return super.equals(obj) &&     //equal padre que compara el nom
+		return super.equals(obj) 		 &&     //equal padre que compara el nom
 				obj instanceof Cuadrado  &&   // 
 				((Cuadrado)obj).getLado()==lado; //si es lado es igual parametro y clase
 	}

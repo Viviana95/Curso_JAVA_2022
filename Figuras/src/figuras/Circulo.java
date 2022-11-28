@@ -11,7 +11,7 @@ public class Circulo extends Figura {
 
 	public Circulo(String nombre, float pradio) {
 		super(nombre);
-		radio = pradio;
+		this.radio = pradio;
 		
 	}
 
@@ -37,14 +37,12 @@ public class Circulo extends Figura {
 
 	@Override
 	public int hashCode() {
-		// TODO Auto-generated method stub
 		return super.hashCode() + (int)radio; 
 	}
 
 	@Override
 	public boolean equals(Object obj) {
-		// TODO Auto-generated method stub
-		return super.equals(obj) &&
+		return super.equals(obj)       &&
 				obj instanceof Circulo &&
 				((Circulo)obj).getRadio() == radio;
 	}
@@ -54,7 +52,7 @@ public class Circulo extends Figura {
 		StringBuilder sb = new StringBuilder(super.toString());
 		sb.append(", radio = ");
 		sb.append(radio);
-		return super.toString();
+		return sb.toString();
 	}
 
 }
