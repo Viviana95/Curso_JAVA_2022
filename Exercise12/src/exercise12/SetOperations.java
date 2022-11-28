@@ -9,7 +9,7 @@ public abstract class SetOperations <T>{
     public static <T> Set<T> union(Set<T> setA, Set<T> setB) {
         Set <T> unionSet = new HashSet <T>(setA);       
         unionSet.addAll(setB);
-        System.out.println("A union B: " + unionSet);
+       // System.out.println("A union B: " + unionSet);
         return unionSet;
     }
     
@@ -17,7 +17,7 @@ public abstract class SetOperations <T>{
     public static <T> Set<T> interseccion(Set<T> setA, Set<T> setB) {
     	 Set <T> interSet = new HashSet <T>(setA);       
          interSet.retainAll(setB);
-        System.out.println("A intersection B: " + interSet);
+     //   System.out.println("A intersection B: " + interSet);
     	return interSet;
     }
     
@@ -29,8 +29,8 @@ public abstract class SetOperations <T>{
     	Set <T> difSetB = new HashSet <T>(setB);       
     	difSetB.removeAll(setA);
 
-        System.out.println("A difference B: " + difSetA);
-        System.out.println("B difference A: " + difSetB);
+     // System.out.println("A difference B: " + difSetA);
+     //  System.out.println("B difference A: " + difSetB);
     	return difSetA;
     }
     
@@ -39,7 +39,7 @@ public abstract class SetOperations <T>{
         
     	Set <T> difsim = SetOperations.union(setA, setB);
         difsim.removeAll(SetOperations.interseccion(setA, setB));
-        System.out.println("difference sim : " + difsim); 
+       System.out.println("difference sim : " + difsim); 
         return difsim;
     	
 //    	Set <T> difSimSet = new HashSet <T>(setA); 

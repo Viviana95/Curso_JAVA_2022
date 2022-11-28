@@ -35,7 +35,7 @@ class ExampleTest {
 	@Test
 	void test_ConstructInteger() {
 		
-		Example<Integer> intPair = new Example<Integer>(myInt, 2);
+		Example<Integer> intPair = new Example<Integer>(myInt, new Integer(2));
 		Integer first = intPair.getFirst();
 		Integer second = intPair.getSecond();
 		assertEquals(10, first);

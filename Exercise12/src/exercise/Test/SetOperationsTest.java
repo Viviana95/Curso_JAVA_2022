@@ -24,6 +24,7 @@ class SetOperationsTest {
 		setStrA.add("B");
 		setStrA.add("C");
 		setStrA.add("D");
+		setStrA.add("F");
 		
 		setStrB = new HashSet<String>();
 		setStrB.add("A");
@@ -37,6 +38,7 @@ class SetOperationsTest {
 		setIntA.add(new Integer(2));
 		setIntA.add(new Integer(3));
 		setIntA.add(new Integer(4));
+		
 		
 		setIntB = new HashSet<Integer>();
 		setIntB.add(new Integer(1));
@@ -55,7 +57,7 @@ class SetOperationsTest {
 	}
 
 	@Test
-	void test_union() {
+	void test_union_Integer() {
 		Set<Integer> totalUnion = new HashSet<Integer>();
 		totalUnion.add(1);
 		totalUnion.add(2);
@@ -68,5 +70,62 @@ class SetOperationsTest {
 		
 		
 	}
+	@Test
+	void test_union_String() {
+		Set<String> totalUnionStr = new HashSet<String>();
+		totalUnionStr.add("A");
+		totalUnionStr.add("B");
+		totalUnionStr.add("C");
+		totalUnionStr.add("D");
+		totalUnionStr.add("E");
+		totalUnionStr.add("F");
+		
+		assertEquals(totalUnionStr, SetOperations.union(setStrA, setStrB));
+		
+	
+	}
+	@Test
+	void test_Interseccion_Integer() {
+		Set<Integer> inters = new HashSet<Integer>();
+		inters.add(new Integer(1));
+		inters.add(new Integer(2));
+		
+		assertEquals(inters, SetOperations.interseccion(setIntA, setIntB));	
+		
+	}
+	@Test
+	void test_Interseccion_String() {
+		Set<String> inters = new HashSet<String>();
+		inters.add("A");
+		inters.add("B");
+		inters.add("C");
+		inters.add("D");		
+		
+		assertEquals(inters, SetOperations.interseccion(setStrA, setStrB));	
+		
+	}
+	
+	@Test
+	void test_Diferencia_Integer() {
+		Set<Integer> difer = new HashSet<Integer>();
+		difer.add(new Integer(3));
+		difer.add(new Integer(4));
+		
+		
+		assertEquals(difer, SetOperations.diferencia(setIntA, setIntB));	
+		
+	}
+	@Test
+	void test_Diferencia_String() {
+		Set<String> difer = new HashSet<String>();
+		difer.add("F");
+
+		assertEquals(difer, SetOperations.diferencia(setStrA, setStrB));	
+		
+	}
+
+	
+	
+	
 
 }
