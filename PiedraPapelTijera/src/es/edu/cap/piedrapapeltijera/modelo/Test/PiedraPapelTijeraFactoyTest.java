@@ -21,6 +21,7 @@ class PiedraPapelTijeraFactoyTest {
 		piedra = new Piedra();
 		papel = new Papel();
 		tijera = new Tijera();
+	
 	}
 
 	@AfterEach
@@ -80,17 +81,21 @@ class PiedraPapelTijeraFactoyTest {
 		assertEquals(-1, piedra.comparar(papel));		
 	}
 	@Test
-	void test_Piedra_igual_Piedra() {
+	void test_Piedra_igual_Piedra() {	
 		assertEquals(0, piedra.comparar(piedra));
+		assertEquals("piedra empata con piedra", piedra.getDescripcionResultado());
 	}
 	@Test
 	void test_Papel_igual_Papel() {
 		assertEquals(0, papel.comparar(papel));
+		assertEquals("papel empata con papel", papel.getDescripcionResultado());
 	}
 	@Test
 	void test_Tijera_igual_Tijera() {
 		assertEquals(0, tijera.comparar(tijera));
+		assertEquals("tijera empata con tijera", tijera.getDescripcionResultado());
 	}
+	
 	
 	
 	

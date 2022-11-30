@@ -23,16 +23,16 @@ public class Piedra extends PiedraPapelTijeraFactoy {
 		switch (numRec) {
 		case PAPEL:
 			result = -1;
-			descripcionResultado = nombre + "perdistes con " + pAll.getNombre();
+			descripcionResultado = nombre + " perdistes con " + pAll.getNombre();
 			break;
 		case TIJERA:
 			result = 1;
-			descripcionResultado = nombre + "ganastes con " + pAll.getNombre();
+			descripcionResultado = nombre + " ganastes con " + pAll.getNombre();
 			break;
 
 		default:
 			result = 0;
-			descripcionResultado = nombre + "empata con " + pAll.getNombre();
+			descripcionResultado = nombre + " empata con " + pAll.getNombre();
 			break;
 		}
 		return result;
