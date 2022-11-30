@@ -26,7 +26,7 @@ class PersonaTest {
 
 	
 	List<Persona> listPersonas;
-	List<Persona> listPers;
+	//List<Persona> listPers;
 	
 	@BeforeEach
 	void setUp() throws Exception {
@@ -50,7 +50,7 @@ class PersonaTest {
 		
 		
 		//
-		listPers = new ArrayList<Persona>();
+		//listPers = new ArrayList<Persona>();
 		   
        
 		

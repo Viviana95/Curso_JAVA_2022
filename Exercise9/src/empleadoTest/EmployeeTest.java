@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 
 import empleado.Employee;
 
-class EmployeeTest {
+class EmployeeTest{
 	
 	Employee person1;
 	Employee person2;
@@ -35,9 +35,9 @@ class EmployeeTest {
 	@Test
 	void testPersonEquals_True () {
 		
-		Date fechaIngreso = new Date(2022, 11, 12);
+		Date fechaIn = new Date(2022, 11, 12);
 				
-		Employee person3 = new Employee(fechaIngreso, 16.000, "PepaPig", 37);	
+		Employee person3 = new Employee(fechaIn, 16.000, "PepaPig", 37);	
 	    assertTrue(person3.equals(person1));
 	   
 	}

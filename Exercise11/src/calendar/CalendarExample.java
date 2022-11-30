@@ -42,7 +42,7 @@ public class CalendarExample {
 
 		System.out.print("Sun\t Mon\t Tue\t Wed\t Thu\t Fri\t Sat\n");
 		
-		int dayM = monthLength(month, year);
+		int dayM = monthLength(month, year); //dias del mes
 		int spaces = getSpace(day, month, year); // número de días para imprimir
 
 		
