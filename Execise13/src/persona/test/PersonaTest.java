@@ -4,12 +4,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 
 import personas.Persona;
 import personas.PersonasUtil;
@@ -23,17 +26,20 @@ class PersonaTest {
 
 	
 	List<Persona> listPersonas;
+	List<Persona> listPers;
 	
 	@BeforeEach
 	void setUp() throws Exception {
 		
         listPersonas = new ArrayList<Persona>();
    
-        //map
+        //list
 		listPersonas.add(new Persona(1, 10, "Masha"));
 		listPersonas.add(new Persona(2, 15, "PeppaPig"));
 		listPersonas.add(new Persona(3, 8, "Moana"));
 		listPersonas.add(new Persona(4, 18, "Mulan"));
+		
+
 		
 		
 		//map
@@ -42,8 +48,13 @@ class PersonaTest {
 		p3 = new Persona(3, 8, "Moana");
 		p4 = new Persona(4, 18, "Mulan");
 		
+		
+		//
+		listPers = new ArrayList<Persona>();
+		   
+       
+		
 	}
-	
 	
 
 	@AfterEach
@@ -93,7 +104,19 @@ class PersonaTest {
 		
 		assertNotEquals(mapPersons, PersonasUtil.getPersonas(listPersonas));
 
+	}
+	
+	@Test
+	void test_order_person_True() {
+		
+		Set<Persona> treePers = PersonasUtil.orderPersonas(listPersonas);
+		
+		Iterator<Persona> it = treePers.iterator();
+		
+		assertEquals("Moana", it.next().getNombre());
+			
 
 	}
+	
 
 }

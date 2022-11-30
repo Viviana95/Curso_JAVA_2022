@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class Persona {
+public class Persona implements Comparable<Persona>{
 	private int id;
 	private int edad;
 	private String nombre;
@@ -15,6 +15,7 @@ public class Persona {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
 	/**
 	 * @param id
 	 * @param edad
@@ -64,7 +65,10 @@ public class Persona {
 		this.nombre = nombre;
 	}
 	
-	
+	@Override
+	public int compareTo(Persona o) {
+		return ((Integer)edad).compareTo(o.getEdad());
+	}
 	
 	
 	

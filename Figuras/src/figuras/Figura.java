@@ -5,10 +5,10 @@ package figuras;
 
 /**
  * @author vtrujill
- *
+ *Es la clase padre 
  */
 
-public abstract class Figura {
+public abstract class Figura  implements Comparable<Figura>{
 	private String nombre;
 	private static int cantFiguras;
 
@@ -19,6 +19,7 @@ public abstract class Figura {
 		cantFiguras ++;
 	}
 
+	
 	public Figura(String nombre) {
 		this();
 		this.nombre = nombre;
@@ -63,10 +64,17 @@ public abstract class Figura {
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		StringBuilder sb = new StringBuilder("\nnombre= ");
 		sb.append(nombre);
 		return sb.toString();
 	}
+	@Override
+	public int compareTo(Figura o) {
+		return nombre.compareTo(o.getNombre());
+		//return (-1)*nombre.compareTo(o.getNombre()); inversa
+	}
+
+	
+	
 
 }
