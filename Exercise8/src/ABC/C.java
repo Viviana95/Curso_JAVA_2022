@@ -9,6 +9,7 @@ public class C {
 		try {
 			A.a();
 		} catch (ExceptionA e) {
+			e.printStackTrace();
 			
 		}
 		A.b();

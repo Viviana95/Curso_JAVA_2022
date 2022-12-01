@@ -44,7 +44,7 @@ public class Employee {
 	}
 
 	public void setFechaIngreso(Date fechaIngreso) {
-		if (nombre == null)
+		if (fechaIngreso == null)
 			fechaIngreso = new Date();
 		else
 			this.fechaIngreso = fechaIngreso;
