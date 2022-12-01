@@ -19,7 +19,7 @@ public class CalendarExample {
 //		System.out.println("El día es " + cal.get(Calendar.DATE));
 //		System.out.println("El día de la semana es " + cal.get(Calendar.DAY_OF_WEEK));
 		
-		Calendar cal = Calendar.getInstance();
+		
 		
 		System.out.print("Ingrese el año:");
 		Scanner sc = new Scanner(System.in);
@@ -36,7 +36,7 @@ public class CalendarExample {
 
 	}
 
-	public static void calendarPrint(int year, int month, int day) {
+	public static void calendarPrint(int day,  int month, int year) {
 
 		
 
@@ -70,15 +70,16 @@ public class CalendarExample {
 	private static int monthLength(int month, int year) {
 		Calendar cal = Calendar.getInstance();
 		cal.set(year, month-1, 1);
-		int days = 1;
+		int day = 1;
 		
 		while(cal.get(Calendar.MONTH)==(month-1)) {
-			days = cal.get(Calendar.DATE);
+			day = cal.get(Calendar.DATE);
 			cal.add(Calendar.DATE, 1);
 		}
-		return days;
+		return day;
 	}
 
+	//ejemplo
 	private static int getLastDay(int month, int year) {
 		Calendar cal = Calendar.getInstance();
 		cal.set(year, month, 1);

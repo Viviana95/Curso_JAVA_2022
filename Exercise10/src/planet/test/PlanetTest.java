@@ -25,6 +25,10 @@ class PlanetTest {
 
 	@AfterEach
 	void tearDown() throws Exception {
+		planetName = null;
+		planetRadio = 0;
+		planetMasa = 0;
+		
 	}
 
 	@Test
