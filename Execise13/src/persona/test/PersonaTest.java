@@ -39,8 +39,6 @@ class PersonaTest {
 		listPersonas.add(new Persona(3, 8, "Moana"));
 		listPersonas.add(new Persona(4, 18, "Mulan"));
 		
-
-		
 		
 		//map
 		p1 = new Persona(1, 10, "Masha");
@@ -48,11 +46,6 @@ class PersonaTest {
 		p3 = new Persona(3, 8, "Moana");
 		p4 = new Persona(4, 18, "Mulan");
 		
-		
-		//
-		//listPers = new ArrayList<Persona>();
-		   
-       
 		
 	}
 	
@@ -67,7 +60,7 @@ class PersonaTest {
 	}
 
 	@Test
-	void test_Get_person() {
+	void test_Get_person_True() {
 		Map<Integer, Persona> mapPersons = new HashMap<Integer, Persona>();
 		mapPersons.put(p1.getId(), p1);
 		mapPersons.put(p2.getId(), p2);
@@ -78,20 +71,6 @@ class PersonaTest {
 		
 
 	}
-	@Test
-	void test_Get_person_true() {
-	
-		Map<Integer, Persona> mapPersons = new HashMap<Integer, Persona>();
-		mapPersons.put(p1.getId(), p1);
-		mapPersons.put(p2.getId(), p2);
-		mapPersons.put(p3.getId(), p3);
-		mapPersons.put(p4.getId(), p4);
-		
-		assertEquals(mapPersons, PersonasUtil.getPersonas(listPersonas));
-
-
-	}
-	
 	@Test
 	void test_Get_person_false() {
 		
@@ -111,12 +90,22 @@ class PersonaTest {
 		
 		Set<Persona> treePers = PersonasUtil.orderPersonas(listPersonas);
 		
-		Iterator<Persona> it = treePers.iterator();
-		
+		Iterator<Persona> it = treePers.iterator();		
 		assertEquals("Moana", it.next().getNombre());
 			
-
 	}
+	@Test
+	void test_order_person_False() {
+		
+		Set<Persona> treePers = PersonasUtil.orderPersonas(listPersonas);
+		
+		Iterator<Persona> it = treePers.iterator();		
+		assertNotEquals("Masha", it.next().getNombre());
+			
+	}
+	
+	
+	
 	
 
 }

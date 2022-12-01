@@ -32,14 +32,12 @@ public abstract class PersonasUtil  {
 	};
       public static Set<Persona> orderPersonas(List<Persona> personas) {
 		
-    	  Set<Persona>setPerson = new TreeSet<Persona>();
-    	  
+    	  Set<Persona>setPerson = new TreeSet<Persona>(); 
  
-    	  for(Persona persona: setPerson ) {
+    	  for(Persona persona: personas ) {
     		 setPerson.add(persona);
    		 
     	  }
-	  
 				
 		return setPerson;
 		
