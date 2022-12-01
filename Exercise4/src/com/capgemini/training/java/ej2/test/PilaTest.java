@@ -12,10 +12,10 @@ import org.junit.jupiter.api.Test;
 import com.capgemini.training.java.ej2.MiPila;
 import com.capgemini.training.java.ej2.Pila;
 
-class MiPilaTest extends MiPila {
+class PilaTest extends Pila {
 	
 	
-	MiPila pila = new MiPila();
+	Pila pila = new Pila();
 	
 	
 	@BeforeEach

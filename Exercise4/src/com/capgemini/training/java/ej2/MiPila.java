@@ -11,24 +11,6 @@ public class MiPila {
 	 * @param numbers
 	 */
 
-	public  void main(String[] args) {
-
-		numbers.add(8);
-		numbers.add(67);
-		numbers.add(12);
-		numbers.add(18);
-
-		for (int i = 0; i < numbers.size(); i++) {
-			
-			System.out.println(numbers.get(i));
-		}
-
-		push(34);
-		pop();
-		peek();
-		reverse();
-
-	}
 	
 	public List<Integer> getNumbers() {
 		return numbers;
