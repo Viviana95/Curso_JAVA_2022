@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 7: Indica si el número es par o impar</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    let number = prompt("Ingrese número");
+    let result = numParImpar(number);
+
+    let frase = prompt("Ingrese una cadena de texto");
+
+
+    function numParImpar(number) {
+        if (number % 2 == 0)
+            return "par";
+        else return "impar";
+
+    }
+    alert(number + " es " + result);
+
+    alert(cadenaTexto(frase));
+
+    function cadenaTexto(cadena) {
+        let cadenas = "La cadena "  + cadena + " tiene ";
+        if (cadena == cadena.toUpperCase()) {
+            alert(cadenas += "solo mayúsculas")
+        }
+        else if (cadena == cadena.toLowerCase()) {
+            alert(cadenas += "solo minúsculas")
+        }
+        else {
+            alert(cadenas += " mayúsculas y minúsculas")
+        }
+        return cadenas;
+    }
+
+
+
+</script>
+
+</html>

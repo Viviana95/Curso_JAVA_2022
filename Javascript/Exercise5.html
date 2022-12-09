@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+    let number = parseInt(prompt("Ingrese solo número de DNI"));
+    let letra = prompt("Ingrese letra de DNI").toUpperCase();
+   
+    if (number < 0 || number > 99999999) {
+        alert("Número no es valido");
+    }
+    else {   
+        var letraCorrecta = letras[number % 23];     
+        if (letraCorrecta != letra){
+            alert("Letra  incorrecta");
+        }
+
+        else {
+            alert("Número y la letra de DNI son correctos");
+        }
+    }
+   
+
+
+</script>
+
+</html>
