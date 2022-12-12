@@ -1,0 +1,36 @@
+body{
+   margin: 5%;
+   background-color: bisque;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+label{
+    font-size: 14px;
+}
+
+form{
+    background-color: rgb(245, 229, 207);
+
+}
+input {	
+	border:none;
+    border:1px solid rgb(225, 206, 206);
+	border-radius:5px;
+}
+
+input:hover {
+	opacity:0.8;
+}
+div{
+    padding: 1%;
+}
+button:hover{
+cursor: pointer;
+}
+legend{
+    color: rgb(41, 13, 18);
+    font-size: large;
+    font-style: initial;
+}
+label:hover{
+    font-size: 16px;
+}
