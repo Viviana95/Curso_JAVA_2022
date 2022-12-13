@@ -1,0 +1,9 @@
+USE capgemini_arg;
+
+SELECT COUNT(cou.COUNTRY_ID) AS 'CANTIDAD DEPARTAMENTOS',  cou.COUNTRY_NAME, REG.REGION_NAME
+FROM departments dep
+JOIN locations LOC ON loc.LOCATION_ID = dep.LOCATION_ID
+JOIN countries COU ON cou.COUNTRY_ID = loc.COUNTRY_ID
+JOIN regions REG ON reg.REGION_ID = cou.REGION_ID
+WHERE REGION_NAME IN( 'Europe','Americas')
+group by cou.COUNTRY_ID;

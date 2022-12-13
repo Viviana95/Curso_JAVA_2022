@@ -1,0 +1,5 @@
+USE capgemini_arg;
+-- SELECT * FROM locations;
+SELECT COUNT(LOCATION_ID), COUNTRY_ID
+FROM locations
+GROUP BY  COUNTRY_ID
