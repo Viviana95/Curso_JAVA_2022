@@ -1,0 +1,4 @@
+USE capgemini_arg;
+INSERT INTO locations VALUES ('9999', 'MANUELA PEDRAZA', '1429', 'BUENOS AIRES','BUENOS AIRES', 'AR');
+INSERT INTO countries VALUES ('AR', 'ARGENTINA', '3')
+

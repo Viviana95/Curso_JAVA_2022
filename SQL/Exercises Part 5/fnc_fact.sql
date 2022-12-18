@@ -1,0 +1,9 @@
+CREATE  DEFINER=`root`@`localhost` FUNCTION `fnc_fact` (NUMBER integer) 
+RETURNS INTEGER
+BEGIN
+IF NUMBER = 0
+  THEN  return (1);
+ ELSE
+  return (NUMBER * DBO.FACTORIAL(NUMERO - 1));
+END IF;
+END
